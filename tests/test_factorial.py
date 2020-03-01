@@ -20,6 +20,35 @@ def test_check_five():
 def test_check_string():
     try:
         x = factorial('x')
-        assert Fail
+        assert False
     except TypeError as exception_out:
         assert True
+
+def test_check_boolean():
+    try:
+        x = factorial(True)
+        assert False
+    except TypeError as exception_out:
+        assert True
+
+def test_check_float():
+    try:
+        x = factorial(3.141)
+        assert False
+    except TypeError as exception_out:
+        assert True
+
+def test_check_list():
+    try:
+        x = factorial([1,2,3,34])
+        assert False
+    except TypeError as exception_out:
+        assert True        
+
+def test_check_dict():
+    try:
+        x = factorial({'a': 3, 'b': 4})
+        assert False
+    except TypeError as exception_out:
+        assert True        
+        
