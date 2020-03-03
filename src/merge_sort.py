@@ -4,7 +4,7 @@ merge_sort.py
 
 def merge(array): 
     if len(array) >1: 
-        mid = len(array)//2 
+        mid = len(array) // 2 
         left_side = array[:mid] ; right_side = array[mid:]
   
         merge(left_side)  ; merge(right_side)
@@ -23,4 +23,3 @@ def merge(array):
           
         while j < len(right_side): 
             array[k] = right_side[j] ; j+=1 ; k+=1
-
