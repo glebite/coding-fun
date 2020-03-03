@@ -30,3 +30,13 @@ def test_check_floats():
     test_data = [3.5, 2.7, 3.141, 0.0, 2.141]
     merge(test_data)
     assert test_data == [0.0, 2.141, 2.7, 3.141, 3.5]
+
+def test_check_sorted():
+    test_data = [1,2,3,4,5,6,7,8]
+    merge(test_data)
+    assert test_data == [1,2,3,4,5,6,7,8]
+
+def test_check_negative_ints():
+    test_data = [8,7,6,-1,-13]
+    merge(test_data)
+    assert test_data == [-13, -1, 6, 7, 8]
