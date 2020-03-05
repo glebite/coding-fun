@@ -1,4 +1,4 @@
-from src.merge_sort import merge
+from src.merge_sort import * 
 
 
 def test_check_even_size():
