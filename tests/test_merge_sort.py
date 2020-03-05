@@ -40,3 +40,11 @@ def test_check_negative_ints():
     test_data = [8,7,6,-1,-13]
     merge(test_data)
     assert test_data == [-13, -1, 6, 7, 8]
+
+def test_homogenous():
+    check = homogenous_type([1,2,3,4])
+    assert check is True
+
+def test_homogenous_not():
+    check = homogenous_type([1,'a', 3.5])
+    assert check is False
