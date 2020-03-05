@@ -15,7 +15,7 @@ def homogenous_type(array):
 def merge(array):
     """ merge """
     if len(array) >1: 
-        mid = len(array)//2 
+        mid = len(array) // 2 
         left_side = array[:mid] ; right_side = array[mid:]
   
         merge(left_side)  ; merge(right_side)
