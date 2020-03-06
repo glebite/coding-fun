@@ -1,3 +1,6 @@
+"""
+test_merge_sort.py - includes tests for the homogenous check code
+"""
 from src.merge_sort import * 
 
 
