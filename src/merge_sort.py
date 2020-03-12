@@ -9,7 +9,13 @@ Repeatedly merge sublists to produce new sorted sublists until there is only one
 """
 
 def homogenous_type(array):
-    """ homogenous_type """
+    """ homogenous_type
+    Checks that the elements in a list are all the same type.
+
+    In: array - a list of values
+    Return: boolean True/False
+    """
+
     if not array:
         return False
     element_type = type(array[0])
