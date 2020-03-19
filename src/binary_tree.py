@@ -35,7 +35,19 @@ class Tree:
                 self._add(value, node.right)
             else:
                 node.right = Node(value)
-    
+
+    def print(self):
+        if self.root != None:
+            self._print(self.root)
+
+    def _print(self, node):
+        if node != None:
+            self._print(node.left)
+            print(str(node.value) + " -> ")
+            self._print(node.right)
+
+            
+                
 def main():
     pass
 
