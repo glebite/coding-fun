@@ -47,13 +47,23 @@ class Tree:
 
     def _print(self, node):
         """ _print """
-        nodes = list()
         if node != None:
             self._print(node.left)
-            print(str(node.value))
-            nodes.append(str(node.value))
+            print(str(node.value)),
             self._print(node.right)
-        return
+
+    def to_list(self):
+        """ convert to a list """
+        if self.root != None:
+            path = list()
+            return self._to_list(self.root, path)
+
+    def _to_list(self, node, path):
+        if node != None:
+            self._to_list(node.left, path)
+            path.append(node.value)
+            self._to_list(node.right, path)
+        return path
             
 def main():
     """ main """
@@ -61,7 +71,8 @@ def main():
     x.add_node(3)
     x.add_node(5)
     x.add_node(1)
-    print(x.display())
+    x.add_node(-1)
+    print(x.to_list())
     
 
 if __name__ == "__main__":
