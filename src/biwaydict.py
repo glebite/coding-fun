@@ -6,10 +6,19 @@ bieaydict.py
 """
 class Biwaydict:
     def __init__(self):
+        "'' __init__ 
+        - going with forward and backward references
+        """
         self.forward = dict()
         self.backward = dict()
 
     def add(self, key, value):
+        "''
+        add
+        - when adding the original key value pair:
+          - set forward key of key  to value
+          - set backward key of vaulue to key
+        """
         self.forward[key] = value
         self.backward[value] = key
 
