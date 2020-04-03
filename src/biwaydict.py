@@ -27,10 +27,10 @@ if __name__ == "__main__":
     x = Biwaydict()
 
     x.add('a', 'something')
-
+    x.add('b', 'something else')
     print(x.forward)
     print(x.backward)
     print(x.forward.keys())
     
     print(x.backward.keys())
-    
+    print(x.backward['something else'])
