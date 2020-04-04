@@ -23,14 +23,17 @@ class Biwaydict:
         self.forward[key] = value
         self.backward[value] = key
 
+    def graphviz_out(self):
+        output = "digraph G {"
+        for vertex in self.forward:
+            output += f"{vertex}" + " -> " + f"{self.forward[vertex]};"
+        output += "}"
+        return output
+        
 if __name__ == "__main__":
     x = Biwaydict()
 
     x.add('a', 'something')
     x.add('b', 'something else')
-    print(x.forward)
-    print(x.backward)
-    print(x.forward.keys())
-    
-    print(x.backward.keys())
-    print(x.backward['something else'])
+
+    print(x.graphviz_out())
