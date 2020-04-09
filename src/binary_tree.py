@@ -39,6 +39,16 @@ class Tree:
                 self._add_node(value, node.right)
             else:
                 node.right = Node(value)
+
+    def delete_node(self, value):
+        # find the node, etc..
+        # start at the root, find the deepest, rightmost node in the tree
+        # as well as the node that we want to delete
+        #
+        # replace the deepest rightmost node's data with node to be deleted
+        #
+        # delete the deepest rightmost node
+        pass
                 
     def display(self):
         """ display """
