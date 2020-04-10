@@ -48,6 +48,11 @@ class Tree:
         # replace the deepest rightmost node's data with node to be deleted
         #
         # delete the deepest rightmost node
+        if self.root is None:
+            return self.root
+        _delete_node(value, self.root)
+
+    def _delete_node(self, value, node):
         pass
                 
     def display(self):
