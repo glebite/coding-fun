@@ -1,8 +1,8 @@
-l = [i for i in range(10) if i % 2]
-print(l)
+list_test = [i for i in range(10) if i % 2]
+print(list_test)
 
-d = {k:v for k,v in enumerate(l)}
-print(d)
+dict_test = {key: value for key, value in enumerate(list_test)}
+print(dict_test)
 
-d = {v:k for k,v in enumerate(l)}
-print(d)
+dict_test = {value: key for key, value in enumerate(list_test)}
+print(dict_test)
