@@ -36,13 +36,13 @@ def merge(array):
           
         while i < len(left_side) and j < len(right_side): 
             if left_side[i] < right_side[j]: 
-                array[k] = left_side[i] ; i+=1
+                array[k] = left_side[i] ; i +=1
             else: 
-                array[k] = right_side[j] ; j+=1
+                array[k] = right_side[j] ; j +=1
             k+=1
           
-        while i < len(left_side): 
-            array[k] = left_side[i] ; i+=1 ; k+=1
+        while i < len(left_side):
+            array[k] = left_side[i]; i+=1 ; k += 1
           
-        while j < len(right_side): 
-            array[k] = right_side[j] ; j+=1 ; k+=1
+        while j < len(right_side):
+            array[k] = right_side[j]; j+=1 ; k += 1
