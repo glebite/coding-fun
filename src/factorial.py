@@ -29,6 +29,10 @@ factorial N:
 def factorial(n):
     """
     factorial docstring - more details in file header
+
+    :param:  n - number to operate on
+    :return: (interesting concept - the factorial n!)
+    :raises: TypeError
     """
     if not isinstance(n, int) or isinstance(n, bool):
         # booleans act like ints
